@@ -1,0 +1,232 @@
+/* Detail Container Styles */
+.detail-container {
+  text-align: center;
+  border-radius: 16px;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: white;
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 1000px;
+  box-shadow: var(--box-shadow);
+  animation: fadeIn 0.5s ease;
+}
+
+/* Navigation Styles */
+.detail-nav {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: white;
+  border-radius: 12px;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: var(--box-shadow);
+}
+
+.detail-nav-link {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  transition: var(--transition);
+}
+
+.detail-nav-link:hover {
+  color: white;
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-3px);
+}
+
+/* Home Page Styles */
+.home-div {
+  font-weight: 700;
+  font-size: 3.5rem;
+  border-radius: 24px;
+  margin: 3rem auto;
+  max-width: 1000px;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  padding: 3rem 2rem;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: var(--box-shadow);
+  animation: fadeIn 0.8s ease, floatAnimation 3s ease-in-out infinite;
+  position: relative;
+  overflow: hidden;
+}
+
+.home-div::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%);
+  animation: rotateGradient 15s linear infinite;
+  z-index: 0;
+}
+
+.home-div span {
+  position: relative;
+  z-index: 1;
+  display: block;
+}
+
+/* Album Styles */
+.album-link {
+  text-decoration: none;
+  color: var(--primary-color);
+  transition: var(--transition);
+  font-weight: 500;
+}
+
+.album-link:hover {
+  color: var(--accent-color);
+}
+
+.album-li {
+  list-style: none;
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: var(--transition);
+}
+
+.album-li:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.album-ul {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  margin: 2rem auto;
+  padding: 2rem;
+  border-radius: 16px;
+  max-width: 800px;
+  box-shadow: var(--box-shadow);
+}
+
+.albums-card-div {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  padding: 2rem;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  border-radius: 16px;
+  margin: 2rem auto;
+  max-width: 1200px;
+  box-shadow: var(--box-shadow);
+}
+
+.albums-card {
+  background-color: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: var(--transition);
+  width: 280px;
+  margin: 0;
+}
+
+.albums-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Todo Styles */
+.todo-div {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  padding: 2rem;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  border-radius: 16px;
+  margin: 2rem auto;
+  max-width: 1200px;
+  box-shadow: var(--box-shadow);
+}
+
+.todo-card {
+  background-color: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: var(--transition);
+  width: 280px;
+  padding: 1.5rem;
+  margin: 0;
+}
+
+.todo-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.todo-link {
+  text-decoration: none;
+  color: var(--primary-color);
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.todo-link:hover {
+  color: var(--accent-color);
+}
+
+/* Comment Styles */
+.comment-div {
+  border-radius: 12px;
+  margin: 1.5rem;
+  padding: 1.5rem;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: white;
+  box-shadow: var(--box-shadow);
+  transition: var(--transition);
+}
+
+.comment-div:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Animations */
+@keyframes floatAnimation {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes rotateGradient {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .home-div {
+    font-size: 2.5rem;
+    padding: 2rem 1rem;
+  }
+  
+  .albums-card-div, .todo-div {
+    padding: 1rem;
+  }
+  
+  .detail-nav {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}

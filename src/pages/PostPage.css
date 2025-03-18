@@ -1,0 +1,19 @@
+.post-card-div{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color: #3c20f6b9;
+}
+
+.post-card{
+  margin: 25px;
+}
+
+.post-link{
+  text-decoration: none ;
+  color: #3c20f6b9;
+}
+
+.post-link:hover{
+  color: red;
+}
