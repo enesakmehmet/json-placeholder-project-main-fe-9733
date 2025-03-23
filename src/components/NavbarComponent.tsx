@@ -1,10 +1,17 @@
 import { Container, Nav, Navbar } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import ThemeToggle from "./ThemeToggle";
+import { useContext } from "react";
+import { ThemeContext } from "../context/ThemeContext";
 
 function NavbarComponent() {
+  const { darkMode } = useContext(ThemeContext);
+  
   return (
     <Navbar expand="lg" className="py-3" style={{
-      background: 'linear-gradient(135deg, var(--primary-color), var(--secondary-color))',
+      background: darkMode 
+        ? '#1a1a1a' 
+        : 'linear-gradient(135deg, var(--primary-color), var(--secondary-color))',
       boxShadow: 'var(--box-shadow)'
     }}>
       <Container>
@@ -24,6 +31,9 @@ function NavbarComponent() {
             <Nav.Link as={Link} to="/Favorites" className="text-white mx-2 nav-link-custom">
               <i className="fas fa-star me-1"></i> Favorites
             </Nav.Link>
+            <div className="d-flex align-items-center ms-2">
+              <ThemeToggle />
+            </div>
           </Nav>
         </Navbar.Collapse>
       </Container>
