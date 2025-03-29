@@ -10,6 +10,8 @@ import TodosPage, { TodoDataLoader } from "./pages/TodosPage";
 import AlbumDetailPage, { albumDetailsLoader } from "./pages/AlbumDetailPage";
 import PostDetailPage, { postLoader } from "./pages/PostDetailPage";
 import { usersLoader, userDetailLoader } from "./loaders/userLoaders";
+import DraggableAlbumPage, { DraggableAlbumDataLoader } from "./pages/DraggableAlbumPage";
+import DraggablePostPage, { DraggablePostDataLoader } from "./pages/DraggablePostPage";
 
 export const routes: RouteObject[] = [
   {
@@ -60,6 +62,16 @@ export const routes: RouteObject[] = [
         path: "/users/:userId/posts/:postId",
         element: <PostDetailPage/>,
         loader: postLoader
+      },
+      {
+        path: "/users/:userId/draggable-albums",
+        element: <DraggableAlbumPage />,
+        loader: DraggableAlbumDataLoader,
+      },
+      {
+        path: "/users/:userId/draggable-posts",
+        element: <DraggablePostPage />,
+        loader: DraggablePostDataLoader,
       }
     ],
   },

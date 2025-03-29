@@ -139,6 +139,24 @@ function UserDetailPage() {
                   <i className="fas fa-tasks me-1"></i> Yapılacaklar
                 </Link>
               </li>
+              <li className="nav-item">
+                <Link 
+                  className="nav-link" 
+                  to={`/users/${userId}/draggable-posts`}
+                  style={{ color: 'var(--primary-color)' }}
+                >
+                  <i className="fas fa-sort me-1"></i> Gönderileri Düzenle
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link 
+                  className="nav-link" 
+                  to={`/users/${userId}/draggable-albums`}
+                  style={{ color: 'var(--primary-color)' }}
+                >
+                  <i className="fas fa-sort me-1"></i> Albümleri Düzenle
+                </Link>
+              </li>
             </ul>
           </div>
           <div className="card-body">
